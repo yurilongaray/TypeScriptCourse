@@ -1,0 +1,36 @@
+* TypeScript:
+Opcionalmente tipado;
+Orientado a objetos;
+Imperativo;
+Funcional;
+Compila de ES3 a ES6;
+
+http://www.typescriptlang.org/play/index.html
+
+- Algumas Funcionalidades:
+Type Anotations: anotações;
+Type Inference: não somos obrigados a definir um tipo durante a sua declaração;
+Compila em tempo de escrita de código;
+
+- var: quando declarada, pode ser acessada de qualquer parte do código;
+- let: variáveis com escopo de bloco, semelhante a var quando declarada fora de uma função (global) porém, quando declarada numa função ela pertencerá somente àquela função e seu escopo;
+- const: assim como a let, const também é de escopo de bloco porém é imutável, de leitura;
+
+
+- Para a criação de um arquivo TypeScript, ele deve possuir extensão .tsc;
+- Para compilá-lo, é necessário utilizar o comando tsc nomearquivo;
+- Para executar o ts, é necessário utilizar o comando npx ts-node nomearquivo.ts;
+- instalar -g o npmx e os demais ts-node e typescript instalar localmente --save;
+
+- Módulos: qualquer recurso que você deseja externalizar e utilizar no restante da aplicação;
+- Como importar e exportar: https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6831670?start=0
+
+- Inferencia: quando o tipo da variável é definido por meio do valor atribuído a ela. No typescript:
+let x: boolean = true; ou let x: any = true; onde any é qualquer coisa
+numa funcao ficaria: function soma(a: number, b: number): number {} onde seu retorno deve ser do tipo number, ou void ou any ou etc
+
+
+
+
+
+
