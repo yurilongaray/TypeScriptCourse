@@ -1,11 +1,12 @@
 {
-  "name": "typescriptproject",
+  "name": "typescript-course",
   "version": "1.0.0",
   "description": "",
-  "main": "arrow-functions.js",
+  "main": "server/server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/ts-node ./typescript-course/server/server.ts"
+    "start": "./node_modules/.bin/ts-node ./server/server.ts",
+    "builded": "node ./build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "http": "0.0.0",
     "morgan": "^1.9.0",
     "pg": "^7.4.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.1"
   },
@@ -22,6 +25,7 @@
     "@types/body-parser": "^1.17.0",
     "@types/express": "^4.16.0",
     "@types/morgan": "^1.7.35",
+    "@types/sequelize": "^4.27.24",
     "ts-node": "^7.0.1"
   }
 }
