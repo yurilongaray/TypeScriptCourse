@@ -5,6 +5,9 @@ Imperativo;
 Funcional;
 Compila de ES3 a ES6;
 
+PgAdmin é o client do Postgresql
+
+TypeScript playground:
 http://www.typescriptlang.org/play/index.html
 
 - Algumas Funcionalidades:
@@ -29,8 +32,6 @@ Compila em tempo de escrita de código;
 let x: boolean = true; ou let x: any = true; onde any é qualquer coisa
 numa funcao ficaria: function soma(a: number, b: number): number {} onde seu retorno deve ser do tipo number, ou void ou any ou etc
 
+O que é REST: https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6831764?start=0
 
-
-
-
-
+Projeto Objetivo: https://github.com/SofitSoftware/sofit-view-api

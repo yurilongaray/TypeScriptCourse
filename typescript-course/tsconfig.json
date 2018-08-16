@@ -12,6 +12,7 @@
     },
     "include": [
         "server/**/*.ts",
+        "tests/**/*.ts",
         "server/*.ts"
     ],
     "exclude": [

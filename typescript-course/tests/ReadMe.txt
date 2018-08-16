@@ -1,0 +1,4 @@
+--require ./helpers.js //Importa automaticamente as libs de teste
+--reporter spec //Forma de resposta
+--watch-extensions js //Monitora arquivos com extensão js
+--slow 5000 //Maximo de tempo esperando por resposta (5s)
