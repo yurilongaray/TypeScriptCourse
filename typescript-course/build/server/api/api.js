@@ -5,10 +5,12 @@ var morgan = require("morgan");
 var bodyParser = require("body-parser");
 var routes_1 = require("./routes/routes");
 var errorHandlerApi_1 = require("./errorHandlerApi");
-//Classe responsável por chamar o express, middlewares e rotas
+var auth_1 = require("../auth");
+//Classe responsável por chamar o express, middlewares e rotas, classe Princiapal
 var Api = /** @class */ (function () {
     function Api() {
         this.express = express();
+        this.auth = auth_1.default();
         this.middleware();
     }
     Api.prototype.middleware = function () {
@@ -17,12 +19,13 @@ var Api = /** @class */ (function () {
         this.express.use(bodyParser.urlencoded({ extended: true }));
         this.express.use(bodyParser.json());
         this.express.use(errorHandlerApi_1.errorHandlerApi);
-        this.router(this.express);
+        this.express.use(this.auth.initialize());
+        this.router(this.express, this.auth);
     };
-    Api.prototype.router = function (app) {
-        new routes_1.default(app);
+    Api.prototype.router = function (app, auth) {
+        new routes_1.default(app, auth);
     };
     return Api;
 }());
-//Exportando uma instancia da classe com a propriedade express
+//Exportando uma instancia da clo é válidose com a propriedade express
 exports.default = new Api().express;

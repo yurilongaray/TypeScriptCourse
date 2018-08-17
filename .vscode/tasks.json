@@ -8,6 +8,19 @@
             "script": "builded",
             "path": "typescript-course/",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "builded-test",
+            "path": "typescript-course/",
+            "problemMatcher": []
+        },
+        {
+            "type": "typescript",
+            "tsconfig": "typescript-course/tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ]
         }
     ]
 }
