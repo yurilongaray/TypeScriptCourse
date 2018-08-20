@@ -40,3 +40,5 @@ JWT (Json Web Token): https://www.udemy.com/typescript-na-pratica-criando-aplica
 Projeto Objetivo: https://github.com/Sofithttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0
 
 A autenticação é um middleware que deve ser acionado antes de qualquer requisição para que seja verificado se o usuário pode ou não acessar tal funcionalidade
+
+No export, sempre exportar uma instância da classe para que o modulo esteja pronto para uso. Para, somente, usar um recurso de outro módulo é necessário instânciar tal módulo de forma que não exista o acoplamento entre módulos.

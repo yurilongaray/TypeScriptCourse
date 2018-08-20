@@ -1,6 +1,7 @@
 import { Response, Request, RequestHandler, ErrorRequestHandler, NextFunction } from 'express';
 import * as HttpStatus from 'http-status';
 import * as jwt from 'jwt-simple';
+import * as bcrypt from 'bcrypt';
 const config = require('../../config/env/config');
 
 class Handlers {
@@ -10,8 +11,9 @@ class Handlers {
     }
 
     authSuccess(res: Response, credentials: any, data: any) {
-    
-        const isMatch = (credentials.password == data.password);
+        
+        //Verifica se os hash abaixo são iguais
+        const isMatch = bcrypt.compareSync(credentials.password, data.password);
     
         if(isMatch) {
             const payload = {
