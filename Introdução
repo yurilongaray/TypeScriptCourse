@@ -42,3 +42,6 @@ Projeto Objetivo: https://github.com/Sofithttps://www.udemy.com/typescript-na-pr
 A autenticação é um middleware que deve ser acionado antes de qualquer requisição para que seja verificado se o usuário pode ou não acessar tal funcionalidade
 
 No export, sempre exportar uma instância da classe para que o modulo esteja pronto para uso. Para, somente, usar um recurso de outro módulo é necessário instânciar tal módulo de forma que não exista o acoplamento entre módulos.
+
+Gulp: é um task runner que automatiza determinadas tarefas. Seu cli deve ser instalado globalmente (sudo npm install -g gulp-cli) e precisa de um arquivo chamado gulp.file (onde serão escritas as tasks e lógicas de automatização).
+https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/7748138?start=60
