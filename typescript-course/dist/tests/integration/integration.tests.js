@@ -1,13 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var HttpStatus = require("http-status");
 var helpers_1 = require("./config/helpers");
+var HttpStatus = require("http-status");
 var jwt = require("jwt-simple");
+var config = require('../../server/config/env/config')();
+var model = require('../../server/models');
 describe('Testes de Integracao', function () {
     'use strict';
-    var config = require('../../server/config/env/config')();
-    var model = require('../../server/models');
-    //O modelo serve como ponte para interagir com o sequelize
     var id;
     var token;
     var userTest = {

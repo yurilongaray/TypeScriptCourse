@@ -1,0 +1,53 @@
+* TypeScript:
+Opcionalmente tipado;
+Orientado a objetos;
+Imperativo;
+Funcional;
+Compila de ES3 a ES6;
+
+PgAdmin é o client do Postgresql
+
+TypeScript playground:
+http://www.typescriptlang.org/play/index.html
+
+- Algumas Funcionalidades:
+Type Anotations: anotações;
+Type Inference: não somos obrigados a definir um tipo durante a sua declaração;
+Compila em tempo de escrita de código;
+
+- var: quando declarada, pode ser acessada de qualquer parte do código;
+- let: variáveis com escopo de bloco, semelhante a var quando declarada fora de uma função (global) porém, quando declarada numa função ela pertencerá somente àquela função e seu escopo;
+- const: assim como a let, const também é de escopo de bloco porém é imutável, de leitura;
+
+
+- Para a criação de um arquivo TypeScript, ele deve possuir extensão .tsc;
+- Para compilá-lo, é necessário utilizar o comando tsc nomearquivo;
+- Para executar o ts, é necessário utilizar o comando npx https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0ts-node nomearquivohttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0ts;
+- instalar -g o npmx e os demais ts-node e typescript insthttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0alar localmente --shttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0ve;
+https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0
+- Módulos: qualquer recurso que você deseja externalizar ehttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0 utilizar no restanhttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0e da aplicação;
+- Como importar e exportar: https://www.udemy.com/typescrihttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0pt-na-pratica-crianhttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0o-aplicacoes-web-com-typescript/learn/v4/t/lecture/6831670?start=0
+
+- Inferencia: quando o tipo da variável é definido por meio do valor atribuídhttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0 a ela. No typescript:
+let x: boolean = true; ou let x: any = true; onde any é qualquer coisa
+numa funcao ficaria: function soma(a: number, b: number): number {} onde seu https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0etorno deve ser do tipo number, ou void ou any ou etc
+
+O que é REST: https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0eb-com-typescript/learn/v4/t/lecture/6831764?start=0
+
+PassportJS: https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843254?start=0
+JWT (Json Web Token): https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0
+
+Projeto Objetivo: https://github.com/Sofithttps://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/6843258?start=0
+
+A autenticação é um middleware que deve ser acionado antes de qualquer requisição para que seja verificado se o usuário pode ou não acessar tal funcionalidade
+
+No export, sempre exportar uma instância da classe para que o modulo esteja pronto para uso. Para, somente, usar um recurso de outro módulo é necessário instânciar tal módulo de forma que não exista o acoplamento entre módulos.
+
+Gulp: é um task runner que automatiza determinadas tarefas. Seu cli deve ser instalado globalmente (sudo npm install -g gulp-cli) e precisa de um arquivo chamado gulp.file (onde serão escritas as tasks e lógicas de automatização).
+https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/7748138?start=60
+
+Serviços de integração contínua: Jenkins, Circle CI, Travis CI
+
+Utilizando o Travis CI: PAS (Platform as a service)), integrado ao GitHub e possui suporte para varias plataformas
+
+Migrations: reflexo do modelo para popular o bd. Replica as informações do modelo para o banco de dados.

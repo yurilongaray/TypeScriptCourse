@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var HttpStatus = require("http-status");
 var jwt = require("jwt-simple");
+var bcrypt = require("bcrypt");
 var config = require('../../config/env/config');
 var Handlers = /** @class */ (function () {
     function Handlers() {
@@ -10,7 +11,8 @@ var Handlers = /** @class */ (function () {
         res.sendStatus(HttpStatus.UNAUTHORIZED);
     };
     Handlers.prototype.authSuccess = function (res, credentials, data) {
-        var isMatch = (credentials.password == data.password);
+        //Verifica se os hash abaixo são iguais
+        var isMatch = bcrypt.compareSync(credentials.password, data.password);
         if (isMatch) {
             var payload = {
                 id: data.id

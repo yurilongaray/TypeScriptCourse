@@ -37,7 +37,9 @@ var User = /** @class */ (function () {
     User.prototype.update = function (id, user) {
         return model.User.update(user, {
             where: { id: id },
-            fields: ['name', 'email', 'password']
+            fields: ['name', 'email', 'password'],
+            hooks: true,
+            individualHooks: true
         });
     };
     ;

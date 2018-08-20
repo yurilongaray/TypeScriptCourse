@@ -1,15 +1,12 @@
-import * as HttpStatus from 'http-status';
 import { app, request, expect } from './config/helpers';
+import * as HttpStatus from 'http-status';
 import * as jwt from 'jwt-simple';
+const config = require('../../server/config/env/config')();
+const model = require('../../server/models');
 
 describe('Testes de Integracao', () => {
 
     'use strict';
-
-    const config = require('../../server/config/env/config')();
-    const model = require('../../server/models');
-
-    //O modelo serve como ponte para interagir com o sequelize
 
     let id;
     let token;
