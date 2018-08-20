@@ -1,13 +1,13 @@
-sudo: enabled
+sudo: required
 language: node_js
-notifications: 
+notifications:
   email: yurilongaray@hotmail.com
-node_js: 
+node_js:
 - 6.11.1
 services:
 - postgresql
-env: 
-  global: 
+env:
+  global:
   - NODE_ENV: test
   - TRAVIS: true
 addons:

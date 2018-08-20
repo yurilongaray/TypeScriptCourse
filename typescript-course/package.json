@@ -4,9 +4,9 @@
   "description": "",
   "main": "server/server.ts",
   "scripts": {
-    "start": "PORT=500 NODE_ENV=development ./node_modules/.bin/ts-node ./server/server.ts",
-    "builded": "PORT=500 NODE_ENV=production node ./dist/server/server.js",
-    "builded-test": "PORT=500 NODE_ENV=test node ./dist/server/server.js",
+    "start": "PORT=5000 NODE_ENV=development ./node_modules/.bin/ts-node ./server/server.ts",
+    "builded": "PORT=5000 NODE_ENV=production node ./dist/server/server.js",
+    "builded-test": "PORT=5000 NODE_ENV=test node ./dist/server/server.js",
     "unit-test": "NODE_ENV=test mocha --opts dist/tests/unit/config/mocha.opts ./dist/tests/unit/unit.tests.js",
     "integration-test": "NODE_ENV=test mocha --opts dist/tests/integration/config/mocha.opts ./dist/tests/integration/integration.tests.js",
     "test": "echo \"Error: no test specified\" && exit 1"
