@@ -2,45 +2,39 @@ import { Request, Response } from 'express';
 import * as HttpStatus from "http-status";
 import * as _ from 'lodash';
 import User from './service';
-import { onError } from '../../api/response/errorHandler';
-import { onSuccess } from '../../api/response/successHandler';
-import { dbErrorHandler } from '../../config/dbErrorHandler';
-
+import Handlers from '../../api/response/handlers';
 
 class UserController {
 
-    private UserService: User;
 
-    constructor() {
-        this.UserService = new User;       
-    }
+    constructor() {}
 
     /* Definição dos métodos direcionados pelas rotas */
     getAll(req: Request, res: Response) {
 
-        this.UserService
+        User
             .getAll()
-            .then(_.partial(onSuccess, res))
-            .catch(_.partial(onError, res, 'Erro ao buscar todos os users'))
+            .then(_.partial(Handlers.onSuccess, res))
+            .catch(_.partial(Handlers.onError, res, 'Erro ao buscar todos os users'))
     };
 
     createUser(req: Request, res: Response) {
 
-        this.UserService
+        User
             .create(req.body)
-            .then(_.partial(onSuccess, res))
-            .catch(_.partial(dbErrorHandler, res))
-            .catch(_.partial(onError, res, 'Erro ao criar usuario'))
+            .then(_.partial(Handlers.onSuccess, res))
+            .catch(_.partial(Handlers.dbErrorHandler, res))
+            .catch(_.partial(Handlers.onError, res, 'Erro ao criar usuario'))
     };
 
     getById(req: Request, res: Response) {
 
         const userID = parseInt(req.params.id); //Transformando em number pois vem em string
 
-        this.UserService
+        User
             .getById(userID)
-            .then(_.partial(onSuccess, res))
-            .catch(_.partial(onError, res, 'Erro ao buscar um usuario pelo ID'))
+            .then(_.partial(Handlers.onSuccess, res))
+            .catch(_.partial(Handlers.onError, res, 'Erro ao buscar um usuario pelo ID'))
     };
 
     updateUser(req: Request, res: Response) {
@@ -48,21 +42,21 @@ class UserController {
         const userID = parseInt(req.params.id);
         const props = (req.body);
 
-        this.UserService
+        User
             .update(userID, props)
-            .then(_.partial(onSuccess, res))
-            .catch(_.partial(onError, res, 'Erro ao atualizar usuario'))
+            .then(_.partial(Handlers.onSuccess, res))
+            .catch(_.partial(Handlers.onError, res, 'Erro ao atualizar usuario'))
     };
 
     deleteUser(req: Request, res: Response) {
 
         const userID = parseInt(req.params.id);
 
-        this.UserService
+        User
             .delete(userID)
-            .then(_.partial(onSuccess, res))
-            .catch(_.partial(onError, res, 'Erro ao deletar usuario'))
+            .then(_.partial(Handlers.onSuccess, res))
+            .catch(_.partial(Handlers.onError, res, 'Erro ao deletar usuario'))
     };
 }
 
-export default UserController;
+export default new UserController();

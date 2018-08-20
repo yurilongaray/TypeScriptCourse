@@ -49,4 +49,4 @@ var User = /** @class */ (function () {
     ;
     return User;
 }());
-exports.default = User;
+exports.default = new User();

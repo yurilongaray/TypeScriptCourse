@@ -1,10 +1,9 @@
 import { Request, Response } from 'express';
 import * as _ from 'lodash';
 import User from '../User/service';
-import authSuccess from '../../api/response/authSuccess';
-import authFail from '../../api/response/authFail';
+import Handlers from '../../api/response/handlers';
 
-const UserService = new User();
+const UserService = User;
 
 class TokenRoutes {
 
@@ -18,12 +17,11 @@ class TokenRoutes {
         if(credentials.hasOwnProperty('email') && credentials.hasOwnProperty('password')) {
             UserService
                 .getByEmail(credentials.email)
-                .then(_.partial(authSuccess, res, credentials))
-                .catch(_.partial(authFail, req, res));
-            }
-
+                .then(_.partial(Handlers.authSuccess, res, credentials))
+                .catch(_.partial(Handlers.authFail, req, res));
+        }
     }
 
 }
 
-export default TokenRoutes;
+export default new TokenRoutes();
