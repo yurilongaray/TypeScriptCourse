@@ -1,8 +1,7 @@
 import { Request, Response } from 'express';
-import * as HttpStatus from "http-status";
 import * as _ from 'lodash';
 import User from './service';
-import Handlers from '../../api/response/handlers';
+import Handlers from '../../api/responses/handlers';
 
 class UserController {
 

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var _ = require("lodash");
 var service_1 = require("./service");
-var handlers_1 = require("../../api/response/handlers");
+var handlers_1 = require("../../api/responses/handlers");
 var UserController = /** @class */ (function () {
     function UserController() {
     }

@@ -4,6 +4,7 @@ import { Application, Request, Response } from 'express';
 //Import dos metodos das rotas
 import UserRoutes from '../../modules/User/routes';
 import TokenRoutes from '../../modules/auth/auth';
+import AuthorRoutes from '../../modules/author/routes';
 
 class Routes {
 
@@ -18,6 +19,12 @@ class Routes {
         app.route('/api/users/:id/update').all(auth.config().authenticate()).put(UserRoutes.update);
         app.route('/api/users/:id/destroy').all(auth.config().authenticate()).delete(UserRoutes.destroy);
         app.route('/token').post(TokenRoutes.auth);
+
+        app.route('/api/author/all').get(AuthorRoutes.index);
+        app.route('/api/author/create').post(AuthorRoutes.create);
+        app.route('/api/author/:id').get(AuthorRoutes.findOne);
+        app.route('/api/author/:id/update').put(AuthorRoutes.update);
+        app.route('/api/author/:id/destroy').delete(AuthorRoutes.destroy);
     }
 }
 
