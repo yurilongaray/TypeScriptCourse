@@ -51,3 +51,5 @@ Serviços de integração contínua: Jenkins, Circle CI, Travis CI
 Utilizando o Travis CI: PAS (Platform as a service)), integrado ao GitHub e possui suporte para varias plataformas
 
 Migrations: reflexo do modelo para popular o bd. Replica as informações do modelo para o banco de dados.
+
+Includes, no sequelize, permite relacionar duas tabelas (autor e posts): https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/learn/v4/t/lecture/11302044?start=15

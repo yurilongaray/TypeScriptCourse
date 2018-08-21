@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function createAuthor(id, name) {
+function createAuthor(id, name, Posts) {
     return {
-        id: id, name: name
+        id: id, name: name, Posts: Posts
     };
 }
 exports.createAuthor = createAuthor;

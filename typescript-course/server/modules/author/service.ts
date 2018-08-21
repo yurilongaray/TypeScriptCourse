@@ -17,14 +17,23 @@ class Author implements IAuthor {
 
     getAll(): Bluebird<IAuthor[]>{
         return model.Author.findAll({
-            order: ['name']
+            order: ['name'],
+            include: 
+                [{
+                    model: model.Post
+                }]
         })
         .then(createAuthors);
     };
 
     getById(id: number): Bluebird<IAuthor> {
         return model.Author.findOne({
-            where: {id}
+            where: {id},
+            order: ['name'],
+            include: 
+                [{
+                    model: model.Post
+                }]
         })
         .then(createAuthor);
     };

@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var routes_1 = require("../../modules/User/routes");
 var auth_1 = require("../../modules/auth/auth");
 var routes_2 = require("../../modules/author/routes");
+var routes_3 = require("../../modules/posts/routes");
 var Routes = /** @class */ (function () {
     function Routes() {
     }
@@ -21,6 +22,11 @@ var Routes = /** @class */ (function () {
         app.route('/api/author/:id').get(routes_2.default.findOne);
         app.route('/api/author/:id/update').put(routes_2.default.update);
         app.route('/api/author/:id/destroy').delete(routes_2.default.destroy);
+        app.route('/api/post/all').get(routes_3.default.index);
+        app.route('/api/post/create').post(routes_3.default.create);
+        app.route('/api/post/:id').get(routes_3.default.findOne);
+        app.route('/api/post/:id/update').put(routes_3.default.update);
+        app.route('/api/post/:id/destroy').delete(routes_3.default.destroy);
     };
     return Routes;
 }());
